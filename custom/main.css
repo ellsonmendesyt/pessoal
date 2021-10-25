@@ -43,12 +43,11 @@
     margin-bottom:15px;
 }
 
-
 .footer .list-group-item{
     border:none;
 }
 
-@media (max-width:700px){
+@media (max-width:990px){
     .footer{
         flex-direction:column;
         text-align:center;
