@@ -4,6 +4,52 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+
+#top-bar{
+    background-color: #000;
+}
+
+.top-bar-title{
+    font-size:1.2rem;
+    color:#fff;
+    padding:10px 0px;
+}
+
+
+/* HERO SECTION */
+
+#hero{
+    height:100vh;
+    margin-bottom: 100px;
+}
+
+.video-title{
+    color:#DFD0C4;
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FIM DA HERO SECTION */
+
+
 #accordion {
     overflow: hidden;
 }
