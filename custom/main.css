@@ -89,6 +89,12 @@
     margin-bottom:15px;
 }
 
+/* aplicar no cabeçalho de testemunhos */
+.brown{
+    background-color:#BC9D84;
+    color:#fff;
+}
+
 .footer .list-group-item{
     border:none;
 }
@@ -198,4 +204,9 @@ footer a{
 .advanced-plan .fa-star{
     color:white;
     font-size:0.7rem;
+}
+
+
+.depo-card{
+    background-color:#F1E8DC !important;
 }

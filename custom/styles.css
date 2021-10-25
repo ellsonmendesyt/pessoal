@@ -18,7 +18,7 @@ header#topo h1{
     font-size: 1.3em;
 }
 main{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     padding: 10px;
     display: flex;
