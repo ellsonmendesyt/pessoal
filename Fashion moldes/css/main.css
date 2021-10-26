@@ -261,3 +261,22 @@ footer a{
     min-width:300px;
 }
 
+
+.owl-carousel .item {
+  min-width: 450px;
+  height:450px;
+  overflow: hidden;
+  border-radius:15px;
+  
+}
+
+.owl-img{
+    width:100%;
+}
+
+@media (max-width:500px){
+    .owl-carousel .item {
+        min-width: 200px;
+        height:200px;
+      }
+}

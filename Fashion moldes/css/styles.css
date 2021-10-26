@@ -68,6 +68,8 @@ main{
     border: none;
     box-shadow: 5px 5px 5px #696969;
     cursor: pointer;
+
+    border-radius:30px;
 }
 
 .flash {
