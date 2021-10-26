@@ -4,6 +4,9 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.w-90{
+    width:90%;
+}
 
 
 #top-bar{
@@ -42,6 +45,13 @@
     background-color: transparent;
 }
 
+.acesso{
+    box-shadow: 1px 1px 1px #696969;
+}
+.acesso-pro{
+    box-shadow: 1px 1px 1px #797878;
+}
+
 #basic, #advanced, .acesso,.acesso-pro{
     transition: .4s ease-out;
 }
@@ -50,19 +60,24 @@
 }
 
 
+.garantia-img{
+    width:30%;
+}
 
 
-.acesso:hover, .acesso-pro:hover{
+/* .acesso:hover, .acesso-pro:hover{
   background-color:#068000 !important;
 }
  .acesso-pro:hover{
   color:#fff;
   background-color:#068000 !important;
+} */
+
+
+
+.elson{
+    border: 2px solid lime;
 }
-
-
-
-
 
 
 
@@ -79,12 +94,23 @@
 #accordion {
     overflow: hidden;
 }
+#accordion .card-header,#accordion .card-body {
+    background:#F8F3ED;
+   
+}
+
 
 #accordion h5{
     font-family:"Poppins", sans-serif;
     font-weight: 400;
     font-size: 1.3rem;
     color:#1C1C1A !important;
+  
+
+    white-space: nowrap; 
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -210,8 +236,9 @@ footer a{
 
 
 #basic{
-    background-color:#fff;
+    background-color:#F8F3ED;
 }
+
 
 
 #advanced{
@@ -225,6 +252,7 @@ footer a{
 #advanced a{
     /* background-color: #fff; */
     color:#1C1C1A !important;
+    
 }
 #advanced .btn{
     background-color: #fff;
@@ -253,8 +281,22 @@ footer a{
 
 
 .depo-card{
-    background-color:#F1E8DC !important;
+    background-color:#F8F3ED;
+    width:23rem;
+    max-width:28rem;
 }
+
+@media (min-width:600px){
+    .depo-card{
+        width: 25rem;
+    }
+}
+
+.depo-card .card-footer{
+    border-top: none;
+    background-color:#F8F3ED;
+}
+
 
 .mulheres .item{
     background-color: blue;
