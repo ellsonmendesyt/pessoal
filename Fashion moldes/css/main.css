@@ -1,13 +1,14 @@
 * {
-    /* margin: 0;
-    padding: 0; */
+    margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
 
 
 #top-bar{
-    background-color: #000;
+    background-color: #1C1C1A;
+  
 }
 
 .top-bar-title{
@@ -32,11 +33,32 @@
 }
 
 
+.stripe{
+    display: inline-block !important;
+    padding: 7px 10px !important;
+}
+
+.no-bg{
+    background-color: transparent;
+}
+
+#basic, #advanced, .acesso,.acesso-pro{
+    transition: .4s ease-out;
+}
+#basic:hover, #advanced:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
 
 
 
 
-
+.acesso:hover, .acesso-pro:hover{
+  background-color:#068000 !important;
+}
+ .acesso-pro:hover{
+  color:#fff;
+  background-color:#068000 !important;
+}
 
 
 
@@ -49,11 +71,21 @@
 
 /* FIM DA HERO SECTION */
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins';
+}
+
 
 #accordion {
     overflow: hidden;
 }
 
+#accordion h5{
+    font-family:"Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color:#1C1C1A !important;
+}
 
 
 
@@ -93,6 +125,7 @@
 .brown{
     background-color:#BC9D84;
     color:#fff;
+    
 }
 
 .footer .list-group-item{
@@ -106,6 +139,10 @@
     }
 }
 
+
+.btn{
+    border-radius:20px;
+}
 
 .btn a{
     text-decoration: none;
@@ -131,7 +168,7 @@
 }
 
 #accordion h5 button{
-    color:#000;
+    color:#1C1C1A;
     text-decoration: none;
 }
 
@@ -149,11 +186,19 @@ footer a{
    font-size:1.3rem;
 }
 
+.convencer{
+    display:flex;
+    flex-direction: column;
+}
 
-.convencer h5{
+.convencer h1, .convencer h5{
     /* display: max-content; */
     background-color: #BC9D84;
     color:#ffff;
+    display:inline-block;
+    /* padding: 20px 30px; */
+    margin-bottom:10px;
+
 }
 
 .sub-title{
@@ -170,7 +215,7 @@ footer a{
 
 
 #advanced{
-    background-color: #000;
+    background-color: #1C1C1A;
 }
 
 #advanced li, span,h4{
@@ -179,14 +224,14 @@ footer a{
 
 #advanced a{
     /* background-color: #fff; */
-    color:#000 !important;
+    color:#1C1C1A !important;
 }
 #advanced .btn{
     background-color: #fff;
 }
 
 #basic li, span,h4{
-    color:#000;
+    color:#1C1C1A;
 }
 
 #basic span{
@@ -210,3 +255,9 @@ footer a{
 .depo-card{
     background-color:#F1E8DC !important;
 }
+
+.mulheres .item{
+    background-color: blue;
+    min-width:300px;
+}
+

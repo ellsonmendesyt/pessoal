@@ -1,3 +1,5 @@
+/* ==== Globais ===== */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +9,17 @@
 h1,h3,p{
     word-break: break-word;
 }
+main > div{
+    margin: 10px 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/*  ===== Fim Globais ==== */
+
 header#topo {
     background-color: #1C1C1C;
     color: #FFFFFF;
@@ -28,25 +41,9 @@ main{
 
 #parte1 {
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: -20px;
 }
-h1.titulo{
-    text-align: center;
-    font-size: 1.7em;
-    font-weight: 600;
-    padding: 10px;
 
-}
-p.saibaMais {
-    color: #bc9d84;
-    font-family: poppins latin, Sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: underline;
-    padding: 10px 0;
-    text-align:center;
-}
 
 #video {
     display: flex;
@@ -100,22 +97,29 @@ p.saibaMais {
     }
 }
 
+/* ======= Textos ======= */
+
+/* Div que tem os textos com o fundo marrom */
 .destaque{
     width: 80%;
     max-width: 500px;
     margin: auto;
 }
+/*Texto com o fundo com cor */
 .p-destaque {
     color: #FFFFFF;
     background-color: #BC9D84;
-    font-size: 1.6em;
+    font-size: 1.2em;
     font-weight: 500;
     text-align: center;
-    padding: 10px;
+    padding: 5px 10px;
     width: 80%;
     margin: 10px auto;
+    max-width: fit-content;
+
 
 }
+/*Textos menores */
 .conteudo{
     color: #BC9D84;
     font-size: 1.3em;
@@ -123,6 +127,28 @@ p.saibaMais {
     margin: 10px 0;
     padding:10px;
 }
+/*Textos maiores (Que estão em negrito) */
+h1.titulo{
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: 600;
+    padding: 10px;
+}
+/* Textos menores que estão sublinhados */
+p.saibaMais {
+    color: #bc9d84;
+    font-family: "Poppins", Sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+    padding: 10px 0;
+    text-align:center;
+}
+/* ====== Fim Textos ======= */
+
+
+/* ===== Imagens ===== */
 .imagens{
     display: flex;
     justify-content: center;
@@ -134,9 +160,11 @@ p.saibaMais {
     margin: 10px;
     width: 45%;
 }
-main > div{
-    margin: 10px 0;
-}
+/* ===== FIM Imagens */
+
+
+
+/* === Cards Modelos === */
 .container-moldes{
     display: flex;
     flex-direction: row;
@@ -163,51 +191,94 @@ main > div{
     width: 65%;
 }
 .link-molde{
+    display: flex;
     border-radius: 0 0 20px 20px;
     padding: 10px;
     background: #BC9D84;
     color: #FFFFFF;
     cursor: pointer;
+    position: relative;
+    top: 15px;
 
 }
-.link-molde h1{
+.link-molde a{
     font-size: 1em;
     text-align: Center;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 .card-molde ul{
     height: 80%;
     padding: 0 15px;
 }
-@media (max-width: 1230px){
-    .container-moldes{
-        flex-direction: column;
-        align-items:center;
-    }
-    .card-molde{
-        margin: 40px 0;
-        width: 50%;
-    }
+/* === Fim card Modelos === */
+
+
+/*===== MODAL ===== */
+.modal{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: #333;
+    display: flex;
+
+    --opacity: 0;
+    --pointer:none;
+    opacity: var(--opacity);
+    pointer-events: var(--pointer);
+    transition: opacity .5s;
 }
-@media (max-width: 880px){
-    main{
-        width: 95%;
-    }
-    .card-molde{
-        width: 70%;
-    }
-    .cards h3{
-        font-size: 0.8em;
-    }
+.modal:target{
+    --opacity: 1;
+    --pointer: unset;
 }
-@media (max-width: 600px){
-    .imagens img{
-        width: 90%;
-    }
+.modal-container{
+    margin: auto;
+    background: #fff;
+    width: 40%;
+    max-width: 483px;
+    max-height: 94%;
+    min-width: 380px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 1em;
+    padding: 10px;
 }
 
-ul{
-    list-style: none;
+.modal-container a{
+    /* Botão de fechar */
+    float:right;
 }
+.modal-container .titulo-view{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+.modal-container .titulo-view h1{
+    background: #F8F3ED;
+    font-size: 1em;
+    padding: 8px;
+    color: #BC9D84;
+    text-align: center;
+    width: 65%;
+}
+.modal-container .view{
+    border-radius: 20px;
+    padding: 0 10px;
+    background: #BC9D84;
+}
+.modal-container .view ul{
+    overflow-y: scroll;
+    height: 500px;
+    text-align: left;
+    color: #fff;
+}
+/* ===== FIM MODAL ===== */
+
+
+/* ==== Card com imagem ==== */
 .card-container{
     display: flex;
     flex-direction: row;
@@ -235,7 +306,6 @@ ul{
     text-align:center;
     padding-top: 13px;
 }
-
 .cards img{
     width: 70%;
     min-width: 150px;
@@ -251,33 +321,35 @@ ul{
     box-shadow: 0 0 3px black;
     border-radius: 20px;
 }
-.titulo-view{
-    display: flex;
-    justify-content: center;
+/* ==== FIM card com imagem ==== */
 
+
+
+/* ==== Responsividade ==== */
+@media (max-width: 1230px){
+    .container-moldes{
+        flex-direction: column;
+        align-items:center;
+    }
+    .card-molde{
+        margin: 40px 0;
+        width: 50%;
+    }
 }
-.close1,.close2,.close3{
-    position: absolute;
-    top: 7px;
-    right: 19px;
-    font-size: 2em;
-    cursor: pointer;
-    color: #FFFFFF;
+@media (max-width: 880px){
+    main{
+        width: 95%;
+    }
+    .card-molde{
+        width: 70%;
+    }
+    .cards h3{
+        font-size: 0.8em;
+    }
 }
-.titulo-view h1{
-    background: #F8F3ED;
-    font-size: 1em;
-    padding: 8px;
-    color: #BC9D84;
-    text-align: center;
-    width: 65%;
+@media (max-width: 600px){
+    .imagens img{
+        width: 90%;
+    }
 }
-.view{
-    border-radius: 20px;
-    padding: 10px;
-    background: #BC9D84;
-}
-.view ul{
-    overflow-y: scroll;
-    height: 500px;
-}
+/* ==== Fim Responsividade ==== */
